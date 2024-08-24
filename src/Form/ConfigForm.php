@@ -144,6 +144,17 @@ class ConfigForm extends Form
                 'id' => $id.'_endpoint',
             ],
         ]);
+        $awsFieldset->add([
+            'name'    => $id.'_public_path_prefix',
+            'type'    => Element\Text::class,
+            'options' => [
+                'label' => $label.'Public Path Prefix',
+                'info'  => 'Overrides the default public path generation with a custom prefix. Can usually leave blank unless you are using a CDN.',
+            ],
+            'attributes' => [
+                'id' => $id.'_public_path_prefix',
+            ],
+        ]);
     }
 
     /**
